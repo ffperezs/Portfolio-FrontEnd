@@ -1,0 +1,100 @@
+/* LOGO */
+.logo{
+    width: 125px;
+    margin: 0;  
+}
+
+@media screen and (max-width: 600px) {
+    .logo{
+        display:none;
+    }
+}
+
+
+/* ICONOS REDES SOCIALES */
+
+.iconos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+
+
+.redes{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.redes a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+}
+
+.redes i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.redes a:hover{
+    background-color: black;
+    border: 2px solid #20C5D1;
+}
+
+.redes a:hover i{
+    color: #20C5D1;
+}
+
+/* LOGIN */
+.login a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border: none;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+}
+
+.login i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.login a:hover{
+    background-color: none;
+    border: none;
+    
+}
+
+.login a:hover i{
+    color:gray;
+}
+
+.ico:hover{
+    color: rgb(247, 243, 48);
+    animation: shake 2s infinite;
+}
+
+.ico{
+       animation: shake 2s infinite;
+}
+
+@keyframes shake {
+    10% {transform: scale(1.05) rotate(5deg);}
+    20% {transform: scale(1.05) rotate(-5deg);}
+    30% {transform: scale(1.05) rotate(5deg);}
+    40% {transform: none}
+}

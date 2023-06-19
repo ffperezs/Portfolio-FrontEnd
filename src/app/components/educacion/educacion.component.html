@@ -1,0 +1,29 @@
+<!-- Educación -->
+<section id="educacion" class="educacion seccion-clara">
+<h1>Educación</h1>
+<!-- Button trigger modal -->
+<button type="submit" class="btn btn-outline-dark border" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-edu">
+  Agregar Educación
+</button>
+  <div class="container text-center">
+    <div class="row">
+      <div class="columna col-12 col-md-4"  *ngFor="let Educacion of estudios">
+        <a href={{Educacion.linkWeb}} target="_blank">
+        <img class="logo" src={{Educacion.logo}}>
+        </a>
+        <p class="educacion-Instituto">{{Educacion.nombreEdu}}</p>
+        <p class="educacion-Titulo">{{Educacion.titulo}}</p>
+        <p><time>{{Educacion.inicio | date:"MM-YYYY"}}</time> - <time>{{Educacion.fin}}</time></p>
+        <div>
+          <button type="submit" class="btn btn-edu" title="Editar">
+            <i class="fa-solid fa-pencil" routerLink="/editEducacion/{{Educacion.id}}"></i>
+          </button>
+          <button type="submit" class="btn btn-edu" title="Borrar" (click)="delete(Educacion.id)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-new-educacion></app-new-educacion>

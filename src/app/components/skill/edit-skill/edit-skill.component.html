@@ -1,0 +1,29 @@
+<!-- Formulario Editar Skill -->
+<div class="container p-1" *ngIf="skill">
+  <h3>-Editar Skill-</h3>
+  <hr>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombre" class="form-label">Skill:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nuevo Nombre"
+           [(ngModel)]="skill.nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="logo" class="form-label">Logo:</label>
+          <input type="url" class="form-control" id="logo" name="logo" placeholder="Ingrese la URL"
+            [(ngModel)]="skill.logo" required>
+        </div>
+        <div class="form-group">
+          <label for="porcentaje" class="form-label">Porcentaje:</label>
+          <input type="number" class="form-control" id="porcentaje" name="porcentaje" placeholder="%"
+            [(ngModel)]="skill.porcentaje" required>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btnLogin">Actualizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

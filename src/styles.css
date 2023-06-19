@@ -1,0 +1,60 @@
+body{
+	background-image: url(assets/img/body0.jpg);
+	max-width: 100%;
+}
+
+
+section h1{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Estilos generales*/
+
+.seccion-oscura{
+    color: #FFF;
+    background-color: #252A2E;
+}
+
+.seccion-clara{
+    color: #252A2E;
+    background-color: #FFF;
+}
+
+.seccion-titulo{
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: 'Righteous';
+}
+
+.seccion-descripcion{
+    font-size: 1.5rem;
+    color: #252A2E;
+}
+
+.seccion-texto{
+    font-size: 1.5rem;
+}
+
+.texto-negro{
+    color: #252A2E;
+}
+
+.texto-blanco{
+    color: white;
+}
+
+.btn{
+    background-color: transparent;
+    font-size: 0.7rem;
+    padding: 5px 20px;
+}
+
+#btn-Modal{
+    padding: 5px;
+    margin-bottom: 15px;
+
+}

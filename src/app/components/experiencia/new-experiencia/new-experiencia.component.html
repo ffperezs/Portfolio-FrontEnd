@@ -1,0 +1,87 @@
+<!-- Modal Nueva Experiencia -->
+<div class="modal fade" id="new-exp" tabindex="-1" aria-labelledby="new-exp" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="new-exp">Nueva Experiencia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+      </div>
+      <!-- formulario Nueva experiencia-->
+      <form [formGroup]="form" (ngSubmit)="onCreate()" novalidate #f="ngForm" name="new-exp">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="nombreExp" class="form-label">Nombre de la Empresa:</label>
+            <input type="text" class="form-control" placeholder="Ingrese el nombre de la Empresa" formControlName="nombreExp"
+              [ngClass]="{'is-invalid': NombreExp.errors && NombreExp.touched, 'is-valid': !NombreExp.errors && NombreExp.touched}">
+            <div *ngIf="NombreExp.errors && NombreExp.touched" class="invalid-feedback">
+              <p *ngIf="NombreExp.errors['required']">
+                El nombre es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="puesto" class="form-label">Cargo Actual:</label>
+            <input type="text" class="form-control" placeholder="Ingrese el Cargo" formControlName="puesto"
+              [ngClass]="{'is-invalid': Puesto.errors && Puesto.touched, 'is-valid': !Puesto.errors && Puesto.touched}">
+            <div *ngIf="Puesto.errors && Puesto.touched">
+              <p *ngIf="Puesto.hasError('required')" class="text-danger">
+                El Cargo es requerido.
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="logo" class="form-label">Logo:</label>
+            <input type="url" class="form-control" placeholder="Ingrese la URL" formControlName="logo">
+          </div>
+          <div class="mb-3">
+            <label for="linkWeb" class="form-label">Pagina WEB:</label>
+            <input type="text" class="form-control" placeholder="https://www..." formControlName="linkWeb">
+          </div>
+          <div class="mb-3">
+            <label for="inicio" class="form-label">Inicio:</label>
+            <input type="date" class="form-control" formControlName="inicio">
+          </div>
+          <div class="mb-3">
+            <label for="fin" class="form-label">Fin:</label>
+            <input type="texto" class="form-control" formControlName="fin">
+          </div>
+          <div class="mb-3">
+            <h6>Descripción de Tareas:</h6>
+            <label for="tarea1" class="form-label">Tarea 1:</label>
+            <input class="form-control" formControlName="tarea1"
+              [ngClass]="{'is-invalid': Tarea1.errors && Tarea1.touched, 'is-valid': !Tarea1.errors && Tarea1.touched}">
+            <div *ngIf="Tarea1.errors && Tarea1.touched">
+              <p *ngIf="Tarea1.hasError('required')" class="text-danger">
+                La tarea es requerida.
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="tarea2" class="form-label">Tarea 2:</label>
+            <input class="form-control" formControlName="tarea2"
+              [ngClass]="{'is-invalid': Tarea2.errors && Tarea2.touched, 'is-valid': !Tarea2.errors && Tarea2.touched}">
+            <div *ngIf="Tarea2.errors && Tarea2.touched">
+              <p *ngIf="Tarea2.hasError('required')" class="text-danger">
+                La tarea es requerida.
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="tarea3" class="form-label">Tarea 3:</label>
+            <input class="form-control" formControlName="tarea3"
+              [ngClass]="{'is-invalid': Tarea3.errors && Tarea3.touched, 'is-valid': !Tarea3.errors && Tarea3.touched}">
+            <div *ngIf="Tarea3.errors && Tarea3.touched">
+              <p *ngIf="Tarea3.hasError('required')" class="text-danger">
+                La tarea es requerida.
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+            <button type="submit" class="btn btnLogin">Agregar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

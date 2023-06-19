@@ -1,0 +1,43 @@
+.fa-user-slash:hover{
+    color: rgb(247, 243, 48);
+    animation: shake 2s infinite;
+}
+
+.fa-user-slash{
+       animation: shake 2s infinite;
+}
+
+@keyframes shake {
+    10% {transform: scale(1.05) rotate(5deg);}
+    20% {transform: scale(1.05) rotate(-5deg);}
+    30% {transform: scale(1.05) rotate(5deg);}
+    40% {transform: none}
+}
+/*.redes-sociales a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+}
+
+.redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.redes-sociales a:hover{
+    background-color: black;
+    border: 2px solid #20C5D1;
+}
+
+.redes-sociales a:hover i{
+    color: #20C5D1;
+}*/
+

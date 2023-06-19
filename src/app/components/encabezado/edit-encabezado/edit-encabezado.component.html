@@ -1,0 +1,57 @@
+<!-- Modal Nueva Skill -->
+<div class="modal fade" *ngIf="persona" id="edit-per" tabindex="-1" aria-labelledby="edit-per" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit-per">Editar Persona</h5>
+      </div>
+      <!-- formulario Nueva Skill-->
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nuevo Nombre"
+            [(ngModel)]="persona.nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="apellido" class="form-label">Apellido:</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese el nuevo Cargo"
+            [(ngModel)]="persona.apellido" required>
+        </div>
+        <div class="form-group">
+          <label for="posicion" class="form-label">Posicion:</label>
+          <input type="url" class="form-control" id="posicion" name="posicion" placeholder="Ingrese la URL"
+            [(ngModel)]="persona.posicion" required>
+        </div>
+        <div class="form-group">
+          <label for="sobreMi" class="form-label">Sobre Mi:</label>
+          <input type="text" class="form-control" id="sobreMi" name="sobreMi" placeholder="https://www..."
+            [(ngModel)]="persona.sobreMi" required>
+        </div>
+        <div class="form-group">
+          <label for="img" class="form-label">Foto de Perfil:</label>
+          <input type="file" class="form-control" id="img" name="img" (change)="upLoadImage($event)"
+            accept=".jpg, .jpeg, .png" 
+            [(ngModel)]="persona.img" required>
+        </div>
+        <div class="form-group">
+          <label for="banner" class="form-label">Inicio:</label>
+          <input type="date" class="form-control" id="banner" name="banner" 
+          [(ngModel)]="persona.banner" required>
+        </div>
+        <div class="form-group">
+          <label for="linkW" class="form-label">Inicio:</label>
+          <input type="date" class="form-control" id="linkW" name="linkW" 
+          [(ngModel)]="persona.linkW" required>
+        </div>
+        <div class="form-group">
+          <label for="linkE" class="form-label">Inicio:</label>
+          <input type="date" class="form-control" id="linkE" name="linkE" 
+          [(ngModel)]="persona.linkE" required>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btnLogin">Actualizar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

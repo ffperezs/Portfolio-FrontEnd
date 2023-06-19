@@ -1,0 +1,56 @@
+<!-- Modal Nueva Educacion -->
+<div class="modal fade" id="new-edu" tabindex="-1" aria-labelledby="new-edu" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="new-edu">Nueva Educación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+      </div>
+      <!-- formulario Nueva Educacion-->
+      <form [formGroup]="form" (ngSubmit)="onCreate()" novalidate #f="ngForm" name="new-edu">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="nombreEdu" class="form-label">Universidad, Institución:</label>
+            <input type="text" class="form-control" placeholder="Ingrese el lugar donde Estudias" formControlName="nombreEdu"
+              [ngClass]="{'is-invalid': NombreEdu.errors && NombreEdu.touched, 'is-valid': !NombreEdu.errors && NombreEdu.touched}">
+            <div *ngIf="NombreEdu.errors && NombreEdu.touched" class="invalid-feedback">
+              <p *ngIf="NombreEdu.errors['required']">
+                El Nombre es requerido.
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="titulo" class="form-label">Titulo:</label>
+            <input type="text" class="form-control" placeholder="Ingrese el Titulo" formControlName="titulo"
+              [ngClass]="{'is-invalid': Titulo.errors && Titulo.touched, 'is-valid': !Titulo.errors && Titulo.touched}">
+            <div *ngIf="Titulo.errors && Titulo.touched">
+              <p *ngIf="Titulo.hasError('required')" class="text-danger">
+                El Titulo es requerido.
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="logo" class="form-label">Logo:</label>
+            <input type="url" class="form-control" placeholder="Ingrese la URL" formControlName="logo">
+          </div>
+          <div class="mb-3">
+            <label for="linkWeb" class="form-label">Pagina WEB:</label>
+            <input type="text" class="form-control" placeholder="https://www..." formControlName="linkWeb">
+          </div>
+          <div class="mb-3">
+            <label for="inicio" class="form-label">Inicio:</label>
+            <input type="date" class="form-control" formControlName="inicio">
+          </div>
+          <div class="mb-3">
+            <label for="fin" class="form-label">Fin:</label>
+            <input type="texto" class="form-control" formControlName="fin">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+            <button type="submit" class="btn btnLogin">Agregar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

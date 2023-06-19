@@ -1,0 +1,59 @@
+/* EDUCACION */
+.educacion{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px 60px 40px;
+}
+
+.educacion .columna{
+    padding: 20px;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;
+}
+
+.educacion .columna:hover{
+    color: white;
+    background-color: black;
+}
+
+
+.logo{
+    width: 115px;
+    height: 55px;
+
+}
+
+.educacion-Instituto{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.badges-contenedor{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.badge{
+    margin: 5px;
+}
+
+.btn-edu i{
+    color: #252A2E;
+}
+
+
+.btn-edu i:hover{
+    color: #FFF;
+}
+
+.btn{
+    border: 0;
+}

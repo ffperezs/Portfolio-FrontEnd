@@ -1,0 +1,11 @@
+/* HARD & SOFT SKILLS*/
+.row{
+    background-color: #252A2E;
+    padding: 20px;
+}
+
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

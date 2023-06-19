@@ -1,0 +1,114 @@
+/* ENCABEZADO */
+
+.banner img {
+	max-width: 100%;
+	object-fit: cover;
+
+}
+.banner{
+	padding:0px;
+	position:relative;
+	height: 40vh;
+	width: 100%;
+}
+
+.btn-banner i{
+	color: white;
+    font-size: 0.7rem;
+    display:flex;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+
+.about-me{
+	background-color: white;
+	position: relative;
+	text-align: center;
+	font-family: 'Righteous';
+}
+
+.about-me img{
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	position: relative;
+	/*top: -40%; */
+	border: 8px solid white;
+}
+
+/*Iconos Contacto*/
+
+.about-me a {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: none;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+}
+
+.about-me i{
+    color: black;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.about-me a:hover{
+    background-color: none;
+    border: none;
+}
+
+.about-me a:hover i{
+    color: #20C5D1;
+}
+
+.btn-perfil i{
+    color: black;
+    font-size: 0.7rem;
+    display:flex;
+    position: absolute;
+    top: 80px;
+    right:120px;  
+}
+
+ .about-me h1 {
+	padding-top: 160px;
+ }
+ .about-me h2 {
+	font-style: 'Righteous';
+	padding: 5px;
+ }
+
+.about-me-description{
+	padding: 2%;
+	border: 1px solid rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+.about-me-description h3{
+	font-family: 'Righteous';
+	font-weight: 400;
+	color: black;
+	font-size: 2.5em;
+}
+
+.btn-sobre-mi i{
+	color: black;
+    font-size: 0.7rem;
+    display:flex;
+    position:absolute;
+    top: 60px;
+    right: 40px;
+}
+
+.btn-datos i{
+	color: black;
+    font-size: 0.7rem;
+    display:flex;
+    position: absolute;
+    top: 180px;
+    right: 40px;
+}
