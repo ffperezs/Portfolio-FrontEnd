@@ -11,7 +11,7 @@ import { NuevoUsuario } from 'src/model/nuevo-usuario';
 export class AuthService {
   
   authURL = 'https://porftolio-backend-ffperezs.onrender.com/auth/';
-  //authURL = environment.URL + 'auth/';
+  //authURL = 'http://localhost:8080/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

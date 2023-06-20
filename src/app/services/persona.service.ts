@@ -10,7 +10,7 @@ import { Persona } from 'src/model/persona';
 export class PersonaService {
  
   perURL = 'https://porftolio-backend-ffperezs.onrender.com/persona/';
-  //perURL = environment.URL + 'persona/';
+  //perURL = 'http://localhost:8080/persona/';
 
   constructor(private httpClient: HttpClient) { }
 
