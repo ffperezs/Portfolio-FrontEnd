@@ -1,3 +1,4 @@
+//import { ImageService } from './../../../services/image.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersonaService } from 'src/app/services/persona.service';
@@ -15,7 +16,8 @@ export class EditEncabezadoComponent implements OnInit {
 
   constructor(private activatedRouter: ActivatedRoute, 
     private personaService: PersonaService,
-    private router: Router ) { }
+    private router: Router,
+    /*public imageService: ImageService*/) { }
 
   ngOnInit() {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -41,8 +43,10 @@ export class EditEncabezadoComponent implements OnInit {
     )
   }
 
-  uploadImage($event: any){
-
-  }
+  /*uploadImage($event: any){
+    const id = this.activatedRouter.snapshot.params['id'];
+    const name = "perfil_" + id;
+    this.imageService.uploadImage($event, name)
+  }*/
 
 }

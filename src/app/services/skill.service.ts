@@ -8,7 +8,9 @@ import { Skill } from 'src/model/skill';
 })
 
 export class SkillService {
-  skillURL = 'http://localhost:8080/skill/'
+  
+  skillURL = 'https://porftolio-backend-ffperezs.onrender.com/skill/';
+  //skillURL = environment.URL + 'skill/';
 
   constructor(private httpClient: HttpClient) { }
 

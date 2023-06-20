@@ -8,7 +8,9 @@ import { Observable } from 'rxjs';
 })
 
 export class EducacionService {
-  eduURL = 'http://localhost:8080/educacion/'
+  
+  eduURL = 'https://porftolio-backend-ffperezs.onrender.com/educacion/';
+  //eduURL = environment.URL + 'educacion/';
 
   constructor(private httpClient: HttpClient) { }
 

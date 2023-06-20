@@ -8,7 +8,9 @@ import { Proyecto } from 'src/model/proyecto';
 })
 
 export class ProyectoService {
-  proURL = 'http://localhost:8080/proyecto/'
+  
+  proURL = 'https://porftolio-backend-ffperezs.onrender.com/proyecto/';
+  //proURL = environment.URL + 'proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 

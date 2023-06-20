@@ -9,15 +9,17 @@ import { NuevoUsuario } from 'src/model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl:string = "http://localhost:8080/auth/";
+  
+  authURL = 'https://porftolio-backend-ffperezs.onrender.com/auth/';
+  //authURL = environment.URL + 'auth/';
 
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.authUrl + 'nuevo', nuevoUsuario);
+    return this.httpClient.post<any>(this.authURL + 'nuevo', nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.authUrl + 'login', loginUsuario)
+    return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario)
   } 
 }
