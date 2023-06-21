@@ -9,22 +9,22 @@
       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div class="form-group">
           <label for="nombre" class="form-label">Nombre:</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nuevo Nombre"
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su Nombre"
             [(ngModel)]="persona.nombre" required>
         </div>
         <div class="form-group">
           <label for="apellido" class="form-label">Apellido:</label>
-          <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese el nuevo Cargo"
+          <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese su Apellido"
             [(ngModel)]="persona.apellido" required>
         </div>
         <div class="form-group">
           <label for="posicion" class="form-label">Posicion:</label>
-          <input type="url" class="form-control" id="posicion" name="posicion" placeholder="Ingrese la URL"
+          <input type="text" class="form-control" id="posicion" name="posicion" placeholder="Ingrese Posición actual"
             [(ngModel)]="persona.posicion" required>
         </div>
         <div class="form-group">
           <label for="sobreMi" class="form-label">Sobre Mi:</label>
-          <input type="text" class="form-control" id="sobreMi" name="sobreMi" placeholder="https://www..."
+          <input type="text" class="form-control" id="sobreMi" name="sobreMi" placeholder="Sobre mi..."
             [(ngModel)]="persona.sobreMi" required>
         </div>
         <div class="form-group">
@@ -34,18 +34,18 @@
             [(ngModel)]="persona.img" required>
         </div>
         <div class="form-group">
-          <label for="banner" class="form-label">Inicio:</label>
-          <input type="date" class="form-control" id="banner" name="banner" 
+          <label for="banner" class="form-label">URL Banner:</label>
+          <input type="text" class="form-control" id="banner" name="banner" 
           [(ngModel)]="persona.banner" required>
         </div>
         <div class="form-group">
-          <label for="linkW" class="form-label">Inicio:</label>
-          <input type="date" class="form-control" id="linkW" name="linkW" 
+          <label for="linkW" class="form-label">link Whatsapp:</label>
+          <input type="text" class="form-control" id="linkW" name="linkW" 
           [(ngModel)]="persona.linkW" required>
         </div>
         <div class="form-group">
-          <label for="linkE" class="form-label">Inicio:</label>
-          <input type="date" class="form-control" id="linkE" name="linkE" 
+          <label for="linkE" class="form-label">Link Mail:</label>
+          <input type="text" class="form-control" id="linkE" name="linkE" 
           [(ngModel)]="persona.linkE" required>
         </div>
         <div class="modal-footer">
