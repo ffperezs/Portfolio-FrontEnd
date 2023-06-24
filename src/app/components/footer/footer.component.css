@@ -3,16 +3,8 @@ footer{
     min-height: 50px;
 }
 
-.derechos-de-autor{
+.texto{
     font-size: 15px;
     color: #aeaeae;
     padding: 10px;
-}
-
-.btn-footer{
-    color: white;
-    font-size: 0.7rem;
-    display:flex;
-    position: absolute;
-    right: 5px;
 }

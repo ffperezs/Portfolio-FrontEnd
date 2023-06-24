@@ -8,8 +8,8 @@ import { Experiencia } from 'src/model/experiencia';
 })
 export class ExperienciaService {
   
-  expURL = 'https://porftolio-backend-ffperezs.onrender.com/experiencia/';
-  //expURL = 'http://localhost:8080/experiencia/';
+  //expURL = 'https://porftolio-backend-ffperezs.onrender.com/experiencia/';
+  expURL = 'http://localhost:8080/experiencia/';
 
   constructor(private httpClient: HttpClient) { }
 

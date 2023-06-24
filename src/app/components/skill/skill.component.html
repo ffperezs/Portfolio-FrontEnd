@@ -4,7 +4,7 @@
   <!-- Button trigger modal -->
   <div class="row">
     <div class="col-12 text-center">
-      <button type="submit" class="btn btn-outline-light border" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-skill">
+      <button type="submit" class="btn btn-outline-light border" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-skill" *ngIf="isLogged">
         Agregar Skills
       </button>
     </div>
@@ -17,10 +17,10 @@
         [outerStrokeGradientStopColor]="'378389'" [innerStrokeColor]="'#FFF'" [animation]="true"
         [animationDuration]="300"></circle-progress>
         <div>
-          <button type="submit" class="btn btn-skill" title="Editar">
+          <button type="submit" class="btn btn-skill" title="Editar" *ngIf="isLogged">
             <i class="fa-solid fa-pencil" routerLink="/editSkill/{{Skill.id}}"></i>
           </button>
-          <button type="submit" class="btn btn-skill" title="Borrar" (click)="delete(Skill.id)">
+          <button type="submit" class="btn btn-skill" title="Borrar" (click)="delete(Skill.id)" *ngIf="isLogged">
             <i class="fa-solid fa-trash"></i>
           </button>
         </div>

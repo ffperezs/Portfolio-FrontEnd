@@ -45,7 +45,7 @@ export class ExperienciaComponent implements OnInit {
         }, data => {
           alert("Experiencia Eliminada");
         }
-      )
+      );
     }
   }
 }

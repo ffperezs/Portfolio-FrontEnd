@@ -28,8 +28,9 @@ export class EncabezadoComponent implements OnInit {
 
   cargarPersona(){
     this.personaService.detail(1).subscribe(
-      data =>
-      (this.persona = data)
+      data =>{
+        this.persona = data
+      }
     )
   }
 }

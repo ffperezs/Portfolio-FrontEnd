@@ -37,7 +37,7 @@ export class EditExperienciaComponent implements OnInit {
       data => {
         this.router.navigate(['']);
       }, err =>{
-         alert("Error al modificar Experiencia");
+         alert("Experiencia Actualizada.");
          this.router.navigate(['']);
       }
     )

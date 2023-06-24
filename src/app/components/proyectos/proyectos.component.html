@@ -2,7 +2,7 @@
 <section id="proyectos" class="proyectos seccion-clara d-flex flex-colum">
   <h1>PROYECTOS</h1>
   <!-- Button trigger modal -->
-  <button type="submit" class="btn btn-outline-dark" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-pro">
+  <button type="submit" class="btn btn-outline-dark" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-pro" *ngIf="isLogged">
     Agregar Proyecto
   </button>
   <h3 class="seccion-descripcion">Estos son algunos proyectos que he creado recientemente...</h3>
@@ -25,10 +25,10 @@
           </div>
         </div>
         <div>
-          <button type="submit" class="btn btn-pro" title="Editar">
+          <button type="submit" class="btn btn-pro" title="Editar" *ngIf="isLogged">
             <i class="fa-solid fa-pencil" routerLink="/editProyecto/{{Proyecto.id}}"></i>
           </button>
-          <button type="submit" class="btn btn-pro" title="Borrar" (click)="delete(Proyecto.id)">
+          <button type="submit" class="btn btn-pro" title="Borrar" (click)="delete(Proyecto.id)" *ngIf="isLogged">
             <i class="fa-solid fa-trash"></i>
           </button>
         </div>

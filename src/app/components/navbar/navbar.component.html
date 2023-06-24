@@ -24,17 +24,15 @@
           </a>
         </li>
         <!-- Button login -->
-        <li class="login nav-item col-3 col-md-none p-1">
-          <a  class="ico" href="/login" *ngIf="!isLogged" rel="noopener noreferrer">
+        <li class="log nav-item col-3 col-md-none p-1">
+          <a  class="icono" type="Button" (click)="login()" *ngIf="!isLogged" rel="noopener noreferrer">
             <i class="fa-solid fa-user-lock"></i>
           </a>
-        </li>
-        <!-- Button logout -->
-        <li class="login nav-item col-3 col-md-none p-1">
-          <a  class="ico" href="/home" *ngIf="isLogged" rel="noopener noreferrer">
+          <a  class="icono" type="Button" (click)="onLogOut()" *ngIf="isLogged" rel="noopener noreferrer">
             <i class="fa-solid fa-arrow-right-from-bracket"></i>
           </a>
         </li>
+        <!-- Button logout -->
       </ul>
     </div>
   </div>

@@ -55,7 +55,7 @@
 }
 
 /* LOGIN */
-.login a {
+.log a {
     width: 40px;
     height: 40px;
     display: flex;
@@ -67,28 +67,28 @@
     text-decoration: none;
 }
 
-.login i{
+.log i{
     color: white;
     font-size: 1.5rem;
     transition: all 0.2s ease-in;
 }
 
-.login a:hover{
+.log a:hover{
     background-color: none;
     border: none;
     
 }
 
-.login a:hover i{
+.log a:hover i{
     color:gray;
 }
 
-.ico:hover{
+.icono:hover{
     color: rgb(247, 243, 48);
     animation: shake 2s infinite;
 }
 
-.ico{
+.icono{
        animation: shake 2s infinite;
 }
 

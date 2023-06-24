@@ -2,7 +2,7 @@
 <section id="educacion" class="educacion seccion-clara">
 <h1>Educación</h1>
 <!-- Button trigger modal -->
-<button type="submit" class="btn btn-outline-dark border" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-edu">
+<button type="submit" class="btn btn-outline-dark border" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-edu" *ngIf="isLogged">
   Agregar Educación
 </button>
   <div class="container text-center">
@@ -15,10 +15,10 @@
         <p class="educacion-Titulo">{{Educacion.titulo}}</p>
         <p><time>{{Educacion.inicio | date:"MM-YYYY"}}</time> - <time>{{Educacion.fin}}</time></p>
         <div>
-          <button type="submit" class="btn btn-edu" title="Editar">
+          <button type="submit" class="btn btn-edu" title="Editar" *ngIf="isLogged">
             <i class="fa-solid fa-pencil" routerLink="/editEducacion/{{Educacion.id}}"></i>
           </button>
-          <button type="submit" class="btn btn-edu" title="Borrar" (click)="delete(Educacion.id)">
+          <button type="submit" class="btn btn-edu" title="Borrar" (click)="delete(Educacion.id)" *ngIf="isLogged">
             <i class="fa-solid fa-trash"></i>
           </button>
         </div>

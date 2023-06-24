@@ -3,10 +3,11 @@
   <div class="row gx-5">
     <div class="banner col-lg-12">
       <img src={{persona.banner}} alt="Banner">
-      <button type="submit" class="btn btn-banner" title="Editar Banner">
-        <i class="fa-solid fa-pencil"></i>
-      </button>
     </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-banner" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#edit-banner" *ngIf="isLogged">
+      <i class="fa-solid fa-pencil"></i>
+    </button>
   </div>
 </div>
 <div class="container">
@@ -15,7 +16,7 @@
       <div class="row gx-5">
         <div class="col-lg-5 justify-content-center position-relative">
           <img src={{persona.img}} alt="Foto Perfil" class="img-fluid position-absolute translate-middle change-pic">
-          <button type="submit" class="btn btn-perfil" title="Editar Foto">
+          <button type="submit" class="btn btn-perfil" title="Editar Foto" >
             <i class="fa-solid fa-camera"></i>
           </button>
           <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
@@ -26,9 +27,6 @@
           <a class="app-contacto" href={{persona.linkE}} target="_blank">
             <i class="fa-regular fa-envelope fa-2xl p-4"></i>
           </a>
-          <button type="submit" class="btn btn-datos" title="Editar datos">
-            <i class="fa-solid fa-pencil"></i>
-          </button>
         </div>
         <div class="col-lg-7 d-flex align-items-center">
           <div class="container about-me-description">
@@ -40,16 +38,12 @@
             <div class="row">
               <div class="col-lg-12">
                 <p>{{persona.sobreMi}}</p>
-                <button type="submit" class="btn btn-sobre-mi" title="Editar Info">
-                  <i class="fa-solid fa-pencil"></i>
-                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- Button trigger modal -->
-        <button type="submit" class="btn btn-outline-dark border" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#edit-per">
-          Editar Persona
+        <button type="submit" class="btn btn-outline-dark border" routerLink="/editPersona/{{persona.id}}" *ngIf="isLogged">
+          Editar Datos
         </button>
       </div>
     </div>
