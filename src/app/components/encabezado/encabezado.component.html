@@ -4,10 +4,10 @@
     <div class="banner col-lg-12">
       <img src={{persona.banner}} alt="Banner">
     </div>
-    <!-- Button trigger modal -->
+    <!-- Button trigger modal 
     <button type="button" class="btn btn-banner" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#edit-banner" *ngIf="isLogged">
       <i class="fa-solid fa-pencil"></i>
-    </button>
+    </button>-->
   </div>
 </div>
 <div class="container">
@@ -16,7 +16,7 @@
       <div class="row gx-5">
         <div class="col-lg-5 justify-content-center position-relative">
           <img src={{persona.img}} alt="Foto Perfil" class="img-fluid position-absolute translate-middle change-pic">
-          <button type="submit" class="btn btn-perfil" title="Editar Foto" >
+          <button type="submit" class="btn btn-perfil" title="Editar Foto" *ngIf="isLogged">
             <i class="fa-solid fa-camera"></i>
           </button>
           <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>

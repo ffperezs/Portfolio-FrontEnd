@@ -14,11 +14,11 @@ import { Pagina404Component } from './components/pagina404/pagina404.component';
 const routes: Routes =[
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
+  {path: 'editPersona/:id', component: EditEncabezadoComponent},
   {path: 'editExperiencia/:id', component: EditExperienciaComponent},
   {path: 'editEducacion/:id', component: EditEducacionComponent},
   {path: 'editSkill/:id', component: EditSkillComponent},
   {path: 'editProyecto/:id', component: EditProyectoComponent},
-  {path: 'editPersona/:id', component: EditEncabezadoComponent},
   {path: '**', component: Pagina404Component}
 ];
 

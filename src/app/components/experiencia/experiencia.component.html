@@ -2,7 +2,7 @@
 <section id="experiencia" class="experiencia seccion-oscura">
 <h1>Experiencia Laboral</h1>
 <!-- Button trigger modal -->
-<button type="submit" class="btn btn-outline-light border" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-exp">
+<button type="submit" class="btn btn-outline-light border" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-exp" *ngIf="isLogged">
   Agregar Experiencia
 </button>
   <div class="container text-center">
@@ -22,9 +22,9 @@
         </div>
         <div>
           <button type="submit" class="btn btn-exp" title="Editar">
-            <i class="fa-solid fa-pencil" routerLink="/editExperiencia/{{Experiencia.id}}"></i>
+            <i class="fa-solid fa-pencil" routerLink="/editExperiencia/{{Experiencia.id}}" *ngIf="isLogged"></i>
           </button>
-          <button type="submit" class="btn btn-exp" title="Borrar" (click)="delete(Experiencia.id)">
+          <button type="submit" class="btn btn-exp" title="Borrar" (click)="delete(Experiencia.id)" *ngIf="isLogged">
             <i class="fa-solid fa-trash"></i>
           </button>
         </div>

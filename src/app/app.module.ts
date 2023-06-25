@@ -72,7 +72,6 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     BrowserAnimationsModule,
     // Specify ng-circle-progress as an import
     NgCircleProgressModule.forRoot({}),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
   ],
   
