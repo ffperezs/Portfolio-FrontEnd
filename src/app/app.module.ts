@@ -35,6 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     BrowserAnimationsModule,
     // Specify ng-circle-progress as an import
     NgCircleProgressModule.forRoot({}),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    provideFirestore(() => getFirestore())
   ],
   
   providers: [
