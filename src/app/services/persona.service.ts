@@ -9,17 +9,17 @@ import { Persona } from 'src/model/persona';
 
 export class PersonaService {
  
-  perURL = 'https://ffperezs.onrender.com/persona/';
-  //perURL = 'http://localhost:8080/persona/';
+  URL = 'https://ffperezs.onrender.com/persona/';
+  //URL = 'http://localhost:8080/persona/';
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Persona[]>{
-    return this.httpClient.get<Persona[]>(this.perURL + 'lista');
+    return this.httpClient.get<Persona[]>(this.URL + 'lista');
   }
 
   public detail(id: number):Observable<Persona>{
-    return this.httpClient.get<Persona>(this.perURL + `detail/${id}`);
+    return this.httpClient.get<Persona>(this.URL + `detail/${id}`);
   }
 
   /*public save(persona: Persona):Observable<any>{
@@ -27,7 +27,7 @@ export class PersonaService {
   }*/
   
   public update(id: number, persona: Persona): Observable<any>{
-    return this.httpClient.put<any>(this.perURL + `update/${id}`, persona);
+    return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
   }
 
   /*public delete(id: number):Observable<any>{

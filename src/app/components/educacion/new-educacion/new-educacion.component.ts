@@ -57,7 +57,7 @@ export class NewEducacionComponent implements OnInit {
     this.educacionService.save(this.form.value).subscribe(
       data => {
         alert("Educación Añadida");
-        this.router.navigate(['']);
+        window.location.reload();
       }, err =>{
         alert ("Error al cargar Educación... Intente nuevamente!");
         this.router.navigate(['']);

@@ -2,7 +2,8 @@
 <section id="proyectos" class="proyectos seccion-clara d-flex flex-colum">
   <h1>PROYECTOS</h1>
   <!-- Button trigger modal -->
-  <button type="submit" class="btn btn-outline-dark" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-pro" *ngIf="isLogged">
+  <button type="submit" class="btn btn-outline-dark" id="btn-Modal" data-bs-toggle="modal" data-bs-target="#new-pro"
+    *ngIf="isLogged">
     Agregar Proyecto
   </button>
   <h3 class="seccion-descripcion">Estos son algunos proyectos que he creado recientemente...</h3>
@@ -10,27 +11,29 @@
     <div class="row">
       <!-- Proyectos -->
       <div class="col-12 col-md-6 col-lg-4" *ngFor="let Proyecto of proyectos">
-        <div class="proyecto">
-          <img src={{Proyecto.img}} alt="img_proyecto">
-          <div class="overlay">
-            <p>{{Proyecto.nombrePro}}</p>
-            <div class="iconos-contenedor">
-              <a href={{Proyecto.linkGit}} target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href={{Proyecto.linkPro}} target="_blank" rel="noopener noreferrer">
-                <i class="fa-regular fa-folder-open"></i>
-              </a>
+        <div class="proyecto externo">
+          <img [src]="Proyecto.img" alt="img_proyecto">
+          <div class="overlay interno">
+            <div>
+              <p>{{Proyecto.nombrePro}}</p>
+              <div class="iconos-contenedor">
+                <a [href]="Proyecto.linkGit" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github m-3"></i>
+                </a>
+                <a [href]="Proyecto.linkPro" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-regular fa-folder-open m-3"></i>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-pro" title="Editar" *ngIf="isLogged">
-            <i class="fa-solid fa-pencil" routerLink="/editProyecto/{{Proyecto.id}}"></i>
-          </button>
-          <button type="submit" class="btn btn-pro" title="Borrar" (click)="delete(Proyecto.id)" *ngIf="isLogged">
-            <i class="fa-solid fa-trash"></i>
-          </button>
+          <div>
+            <button type="submit" class="btn btn-pro" title="Editar" *ngIf="isLogged">
+              <i class="fa-solid fa-pencil" routerLink="/editProyecto/{{Proyecto.id}}"></i>
+            </button>
+            <button type="submit" class="btn btn-pro" title="Borrar" (click)="delete(Proyecto.id)" *ngIf="isLogged">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

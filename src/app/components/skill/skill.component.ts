@@ -36,6 +36,7 @@ export class SkillComponent implements OnInit {
           this.cargarSkill();
         }, data => {
           alert("Skill Eliminada");
+          window.location.reload();
         }
       )
     }

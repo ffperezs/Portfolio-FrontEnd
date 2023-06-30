@@ -1,5 +1,5 @@
 body{
-	background-image: url(assets/img/body0.jpg);
+	background-image: url(assets/img/body.jpg);
 	max-width: 100%;
 }
 
@@ -9,6 +9,7 @@ section h1{
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+    text-shadow: 1px 1px white, -1.5px -1.5px gray;
 }
 
 
@@ -28,6 +29,7 @@ section h1{
     font-size: 2rem;
     padding: 15px 0;
     font-family: 'Righteous';
+    text-shadow: 1px 1px white, -1.5px -1.5px gray;
 }
 
 .seccion-descripcion{

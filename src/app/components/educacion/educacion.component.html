@@ -8,8 +8,8 @@
   <div class="container text-center">
     <div class="row">
       <div class="columna col-12 col-md-4"  *ngFor="let Educacion of estudios">
-        <a href={{Educacion.linkWeb}} target="_blank">
-        <img class="logo" src={{Educacion.logo}}>
+        <a [href]="Educacion.linkWeb" target="_blank">
+        <img class="logo" [src]="Educacion.logo">
         </a>
         <p class="educacion-Instituto">{{Educacion.nombreEdu}}</p>
         <p class="educacion-Titulo">{{Educacion.titulo}}</p>

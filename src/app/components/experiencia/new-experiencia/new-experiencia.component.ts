@@ -78,7 +78,7 @@ export class NewExperienciaComponent implements OnInit {
     this.experienciaService.save(this.form.value).subscribe(
       data => {
         alert("Experiencia Añadida");
-        this.router.navigate(['']);
+        window.location.reload();
       }, err =>{
         alert ("Error al cargar Experiencia... Intente nuevamente!");
         this.router.navigate(['']);

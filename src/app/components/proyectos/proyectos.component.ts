@@ -37,6 +37,7 @@ export class ProyectosComponent implements OnInit {
           this.cargarProyecto();
         }, data => {
           alert("Proyecto Eliminado");
+          window.location.reload();
         }
       )
     }

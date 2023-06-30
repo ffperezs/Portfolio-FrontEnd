@@ -73,8 +73,12 @@
     background-color: #20C5D1;
 }
 
-.btn-proyectos i{
+.btn-pro i{
     color: #000000;
     background-color: transparent;
     font-size: 0.7rem;
+}
+
+.btn{
+    border: 0;
 }

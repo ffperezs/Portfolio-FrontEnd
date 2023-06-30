@@ -51,7 +51,7 @@ export class NewSkillComponent implements OnInit {
     this.skillService.save(this.form.value).subscribe(
       data => {
         alert("Skill Añadida");
-        this.router.navigate(['']);
+        window.location.reload();
       }, err =>{
         alert ("Error al cargar Skill... Intente nuevamente!");
         this.router.navigate(['']);

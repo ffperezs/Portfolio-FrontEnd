@@ -1,37 +1,37 @@
 <!-- Formulario Editar Educación -->
-<div class="container p-1" *ngIf="educacion">
+<div class="container p-3" *ngIf="educacion">
   <h3>-Editar Educación-</h3>
   <hr>
   <div class="row">
     <div>
       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div class="form-group">
-          <label for="nombreEdu" class="form-label">Universidad, Institución:</label>
+          <label for="nombreEdu" class="form-label titulo">Universidad, Institución:</label>
           <input type="text" class="form-control" id="nombreEdu" name="nombreEdu" placeholder="Ingrese el nuevo Nombre"
            [(ngModel)]="educacion.nombreEdu" required>
         </div>
         <div class="form-group">
-          <label for="titulo" class="form-label">Titulo:</label>
+          <label for="titulo" class="form-label titulo">Titulo:</label>
           <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el nuevo Titulo"
             [(ngModel)]="educacion.titulo" required>
         </div>
         <div class="form-group">
-          <label for="logo" class="form-label">Logo:</label>
+          <label for="logo" class="form-label titulo">Logo:</label>
           <input type="url" class="form-control" id="logo" name="logo" placeholder="Ingrese la URL"
             [(ngModel)]="educacion.logo" required>
         </div>
         <div class="form-group">
-          <label for="linkWeb" class="form-label">Pagina WEB:</label>
-          <input type="text" class="form-control" id="linkWeb" name="linkWeb" placeholder="https://www..."
+          <label for="linkWeb" class="form-label titulo">Pagina WEB:</label>
+          <input type="url" class="form-control" id="linkWeb" name="linkWeb" placeholder="https://www..."
           [(ngModel)]="educacion.linkWeb" required>
         </div>
         <div class="form-group">
-          <label for="inicio" class="form-label">Inicio:</label>
+          <label for="inicio" class="form-label titulo">Inicio:</label>
           <input type="date" class="form-control" id="inicio" name="inicio" 
           [(ngModel)]="educacion.inicio" required>
         </div>
         <div class="form-group">
-          <label for="fin" class="form-label">Fin:</label>
+          <label for="fin" class="form-label titulo">Fin:</label>
           <input type="texto" class="form-control" id="fin" name="fin" 
           [(ngModel)]="educacion.fin" required>
         </div>

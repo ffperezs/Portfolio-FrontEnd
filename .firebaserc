@@ -1,8 +1,5 @@
 {
   "projects": {
-    "default": "ffperezs",
-    "portfolio": "ffperezs"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "portfolio-ffperezs"
+  }
 }

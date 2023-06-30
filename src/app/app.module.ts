@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
 // FIN Servicios
 
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { EncabezadoComponent } from './components/encabezado/encabezado.component';
-import { EditEncabezadoComponent } from './components/encabezado/edit-encabezado/edit-encabezado.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de/edit-acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
@@ -25,25 +25,24 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { interceptorProvider } from './services/interceptor.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    EncabezadoComponent,
-    EditEncabezadoComponent,
+    AcercaDeComponent,
+    EditAcercaDeComponent,
     ExperienciaComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
@@ -60,7 +59,6 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    Pagina404Component
     
   ],
 
@@ -73,8 +71,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     BrowserAnimationsModule,
     // Specify ng-circle-progress as an import
     NgCircleProgressModule.forRoot({}),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
-    provideFirestore(() => getFirestore())
   ],
   
   providers: [

@@ -55,7 +55,7 @@ export class NewProyectoComponent implements OnInit {
     this.proyectoService.save(this.form.value).subscribe(
       data => {
         alert("Proyecto Añadido");
-        this.router.navigate(['']);
+        window.location.reload();
       }, err =>{
         alert ("Error al cargar Proyecto... Intente nuevamente!");
         this.router.navigate(['']);

@@ -44,6 +44,7 @@ export class ExperienciaComponent implements OnInit {
           this.cargarExperiencia();
         }, data => {
           alert("Experiencia Eliminada");
+          window.location.reload();
         }
       );
     }

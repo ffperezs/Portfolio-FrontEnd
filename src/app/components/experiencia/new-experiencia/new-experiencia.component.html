@@ -35,7 +35,7 @@
           </div>
           <div class="mb-3">
             <label for="linkWeb" class="form-label">Pagina WEB:</label>
-            <input type="text" class="form-control" placeholder="https://www..." formControlName="linkWeb">
+            <input type="url" class="form-control" placeholder="https://www..." formControlName="linkWeb">
           </div>
           <div class="mb-3">
             <label for="inicio" class="form-label">Inicio:</label>
@@ -77,8 +77,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
-            <button type="submit" class="btn btnLogin">Agregar</button>
+            <button type="button" class="btn btn-outline-dark border m-2" (click)="limpiar()">Limpiar</button>
+            <button type="submit" class="btn btn-outline-dark border m-2">Agregar</button>
           </div>
         </div>
       </form>

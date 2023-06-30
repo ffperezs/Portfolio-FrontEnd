@@ -1,28 +1,28 @@
 <!-- Formulario Editar Proyecto -->
-<div class="container p-1" *ngIf="proyecto">
+<div class="container p-3" *ngIf="proyecto">
   <h3>-Editar Proyecto-</h3>
   <hr>
   <div class="row">
     <div>
       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div class="form-group">
-          <label for="nombrePro" class="form-label">Nombre del Proyecto:</label>
+          <label for="nombrePro" class="form-label titulo">Nombre del Proyecto:</label>
           <input type="text" class="form-control" id="nombrePro" name="nombrePro" placeholder="Ingrese el nuevo Nombre"
            [(ngModel)]="proyecto.nombrePro" required>
         </div>
         <div class="form-group">
-          <label for="linkGit" class="form-label">URL Git:</label>
+          <label for="linkGit" class="form-label titulo">URL Git:</label>
           <input type="url" class="form-control" id="linkGit" name="linkGit" placeholder="Ingrese la URL"
             [(ngModel)]="proyecto.linkGit" required>
         </div>
         <div class="form-group">
-          <label for="linkPro" class="form-label">URL Proyecto:</label>
+          <label for="linkPro" class="form-label titulo">URL Proyecto:</label>
           <input type="url" class="form-control" id="linkPro" name="linkPro" placeholder="Ingrese la URL"
             [(ngModel)]="proyecto.linkPro" required>
         </div>
         <div class="form-group">
-          <label for="img" class="form-label">Imagen:</label>
-          <input type="text" class="form-control" id="img" name="img"
+          <label for="img" class="form-label titulo">Imagen:</label>
+          <input type="url" class="form-control" id="img" name="img"
             [(ngModel)]="proyecto.img" required>
         </div>
         <div class="modal-footer">

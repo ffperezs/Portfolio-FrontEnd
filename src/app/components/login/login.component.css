@@ -1,43 +1,64 @@
-.fa-user-slash:hover{
-    color: rgb(247, 243, 48);
-    animation: shake 2s infinite;
+section{
+    background-color: #FFF;
 }
 
-.fa-user-slash{
-       animation: shake 2s infinite;
+
+h2{
+    text-align: center;
+    font-family: 'Righteous';
+    color: #252A2E;
+    text-shadow: 1px 1px white, -1.5px -1.5px #20C5D1;
 }
 
-@keyframes shake {
-    10% {transform: scale(1.05) rotate(5deg);}
-    20% {transform: scale(1.05) rotate(-5deg);}
-    30% {transform: scale(1.05) rotate(5deg);}
-    40% {transform: none}
+img{
+    width: 380px;
+    height: 480px;
+
 }
-/*.redes-sociales a {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
+
+@media screen and (min-width: 500px) {
+    .img{
+        display:none;
+    }
+}
+
+
+/* Footer */
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+.footer{
+    background-color: #252A2E;
+    font-size: 15px;
+    color: #AEAEAE;
+}
+
+
+/* Redes */
+.redes a {
     border: none;
-    border-radius: 50%;
     transition: all 0.2s ease-in;
     text-decoration: none;
 }
 
-.redes-sociales i{
+.redes i{
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: all 0.2s ease-in;
 }
 
-.redes-sociales a:hover{
-    background-color: black;
-    border: 2px solid #20C5D1;
+.redes a:hover{
+    background-color: transparent;
+    border: none;
 }
 
-.redes-sociales a:hover i{
+.redes a:hover i{
     color: #20C5D1;
-}*/
+}
 

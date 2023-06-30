@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
@@ -7,19 +7,19 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
 import { EditEducacionComponent } from './components/educacion/edit-educacion/edit-educacion.component';
 import { EditSkillComponent } from './components/skill/edit-skill/edit-skill.component';
 import { EditProyectoComponent } from './components/proyectos/edit-proyecto/edit-proyecto.component'; 
-import { EditEncabezadoComponent } from './components/encabezado/edit-encabezado/edit-encabezado.component';
-import { Pagina404Component } from './components/pagina404/pagina404.component';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de/edit-acerca-de.component';
 
 //Definimos nuestras rutas
 const routes: Routes =[
   {path:'', component: HomeComponent},
   {path:'login', component: LoginComponent},
-  {path: 'editPersona/:id', component: EditEncabezadoComponent},
+  {path:'Home', component: HomeComponent},
   {path: 'editExperiencia/:id', component: EditExperienciaComponent},
   {path: 'editEducacion/:id', component: EditEducacionComponent},
   {path: 'editSkill/:id', component: EditSkillComponent},
   {path: 'editProyecto/:id', component: EditProyectoComponent},
-  {path: '**', component: Pagina404Component}
+  {path: 'editPersona/:id', component: EditAcercaDeComponent},
+  /*{path: '**', component: Pagina404Component}*/
 ];
 
 

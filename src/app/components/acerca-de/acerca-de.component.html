@@ -1,0 +1,49 @@
+<!-- Encabezado -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner col-lg-12">
+      <img [src]="persona.banner" alt="Banner">
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row gx-5">
+    <div class="about-me col-lg-12">
+      <div class="row gx-5">
+        <div class="col-lg-5 justify-content-center position-relative">
+          <img [src]="persona.img" alt="Foto Perfil" class="img-fluid position-absolute translate-middle change-pic">
+          <h1 class="hero__title">
+            Hola! Soy <strong class="name">{{persona.nombre}} {{persona.apellido}}</strong>
+          </h1>
+          <h4>{{persona.posicion}}</h4>
+          <a class="app-contacto" [href]="persona.linkW" target="_blank">
+            <i class="fa-brands fa-whatsapp fa-2xl p-4"></i>
+          </a>
+          <a class="app-contacto" [href]="persona.linkE" target="_blank">
+            <i class="fa-regular fa-envelope fa-2xl p-4"></i>
+          </a>
+        </div>
+        <div class="col-lg-7 d-flex align-items-center">
+          <div class="container about-me-description">
+            <div class="row">
+              <div class="col-lg-12 p-3">
+                <h3>SOBRE MI</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <p>{{persona.sobreMi}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-outline-dark border m-2" *ngIf="isLogged"
+            routerLink="/editPersona/{{persona.id}}">
+            Editar Datos
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,10 @@
 export const environment = {
   firebase: {
-    projectId: 'ffperezs',
-    appId: '1:248430844326:web:3a0481136f55e458d89767',
-    storageBucket: 'ffperezs.appspot.com',
+    projectId: 'portfolio-ffperezs',
+    appId: '1:729343170103:web:df8a2064b49530a8e411b2',
+    storageBucket: 'portfolio-ffperezs.appspot.com',
     locationId: 'southamerica-east1',
-    apiKey: 'AIzaSyAt9CO6v4lunKGIOP4JwIBDLVmYuwem0VQ',
-    authDomain: 'ffperezs.firebaseapp.com',
-    messagingSenderId: '248430844326',
-    measurementId: 'G-RYY8GZ3PJT',
+    apiKey: 'AIzaSyBpNN0qXl0yTRv_-EvHMyJv9s1m5KE2i0s',
+    authDomain: 'portfolio-ffperezs.firebaseapp.com',
+    messagingSenderId: '729343170103',
   },}
